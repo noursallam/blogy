@@ -1,2 +1,2 @@
+![Image Description](image.png)
 
-## Codezilla Blog
