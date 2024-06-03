@@ -1,0 +1,12 @@
+@if (!Auth::user()->isFollowing($user))
+    <form action="{{ route('follow', $user->id) }}" method="POST">
+        @csrf
+        <button type="submit">Follow</button>
+    </form>
+@else
+    <form action="{{ route('unfollow', $user->id) }}" method="POST">
+        @csrf
+        @method('DELETE')
+        <button type="submit">Unfollow</button>
+    </form>
+@endif
